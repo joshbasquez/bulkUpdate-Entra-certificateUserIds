@@ -11,7 +11,8 @@ i.e. X509:<SKI>1111111111111111,X509:<RFC822>testuser@yahoo.com
 # Check certificate user id value for a given user:
 (must run part 1 of script to authenticate and generate the token authheader)
 
-$x =Invoke-RestMethod -headers $o365.authHeader -uri "https://graph.microsoft.com/v1.0/users/b9d9xxxxx-xxxxx-xxxxx?`$select=id,mail,authorizationInfo";
+$x =Invoke-RestMethod -headers $o365.authHeader -uri "https://graph.microsoft.com/v1.0/users/b9d9xxxxx-xxxxx-xxxxx?`$select=id,mail,authorizationInfo"
+
 $x.authorizationInfo
 
 example output:
